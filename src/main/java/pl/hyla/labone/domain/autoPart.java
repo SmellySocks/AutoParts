@@ -1,15 +1,16 @@
 package pl.hyla.labone.domain;
 
 public class autoPart {
-    private long id;
-    private String partName;
-    private int price;
+    public Long id;
+    public String partName;
+    public int price;
 
     public autoPart(){
 
     }
 
-    public autoPart(String name, int price) {
+    public autoPart(Long id, String name, int price) {
+        this.id=id;
         this.partName=name;
         this.price=price;
 
