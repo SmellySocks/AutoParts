@@ -5,6 +5,16 @@ public class autoPart {
     private String partName;
     private int price;
 
+    public autoPart(){
+
+    }
+
+    public autoPart(String name, int price) {
+        this.partName=name;
+        this.price=price;
+
+    }
+
     public long getId() {
         return id;
     }
