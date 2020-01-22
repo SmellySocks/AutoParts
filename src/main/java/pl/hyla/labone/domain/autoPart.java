@@ -1,7 +1,7 @@
 package pl.hyla.labone.domain;
 
 public class autoPart {
-    public Long id;
+    public int id;
     public String partName;
     public int price;
 
@@ -9,18 +9,17 @@ public class autoPart {
 
     }
 
-    public autoPart(Long id, String name, int price) {
-        this.id=id;
+    public autoPart(String name, int price) {
         this.partName=name;
         this.price=price;
 
     }
 
-    public long getId() {
+    public int getId() {
         return id;
     }
 
-    public void setId(Long id) {
+    public void setId(int id) {
         this.id = id;
     }
 

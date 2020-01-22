@@ -14,16 +14,16 @@ public interface DAO {
 
     void setConnection(Connection connection) throws SQLException;
 
-    autoPartTime findPartById(Long id) throws SQLException;
+    autoPartTime findPartById(int id) throws SQLException;
 
-    void updateDateInSql(Long partId, int typeUpdate) throws SQLException;
+    void updateDateInSql(int partId, int typeUpdate) throws SQLException;
 
     Date checkDateInDatabase(autoPartTime partTime, int dateVariant) throws SQLException;
 
     Date currentDate();
 
     int addPart(autoPartTime autoPartTime);
-    int updatePartName(Long partId, String nameToUpdate) throws SQLException;
+    int updatePartName(int partId, String nameToUpdate) throws SQLException;
 
     List<autoPartTime> getAllParts();
 

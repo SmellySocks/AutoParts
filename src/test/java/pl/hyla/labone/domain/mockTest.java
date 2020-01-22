@@ -13,8 +13,8 @@ public class mockTest {
 
     @Before
     public void before(){
-        autoPartTime p1 = new autoPartTime(1L,"Clutch", 280);
-        autoPartTime p2 = new autoPartTime(2L, "Gear Selector", 390);
+        autoPartTime p1 = new autoPartTime("Clutch", 280);
+        autoPartTime p2 = new autoPartTime("Gear Selector", 390);
         p1.setCreateTime(new Date());
         part.partList.add(p1);
         part.partList.add(p2);
@@ -34,15 +34,15 @@ public class mockTest {
     }
     @Test
     public void checkIfDateExists(){
-        assertNotNull(part.getByID(1L).getCreateTime());
+        assertNotNull(part.getByID(1).getCreateTime());
     }
     @Test
     public void checkCreateDates(){
-        assertNotEquals(part.getByID(1L).getCreateTime(), part.getByID(2L).getCreateTime());
+        assertNotEquals(part.getByID(1).getCreateTime(), part.getByID(2).getCreateTime());
     }
     @Test
     public void getByID(){
-        assertNotNull(part.getByID(1L));
+        assertNotNull(part.getByID(1));
     }
     @Test
     public void countEntities(){
@@ -50,17 +50,17 @@ public class mockTest {
     }
     @Test
     public void renameEntity(){
-        part.renameAutoPart(1L, "New Name");
-        assertEquals("New Name", part.getByID(1L).partName);
+        part.renameAutoPart(1, "New Name");
+        assertEquals("New Name", part.getByID(1).partName);
     }
     @Test
     public void checkReadDate(){
-        assertNotNull(part.getByID(1L).getReadTime());
+        assertNotNull(part.getByID(1).getReadTime());
     }
     @Test
-    public void checkModyfyDate(){
-        part.renameAutoPart(1L, "new name");
-        assertNotNull((part.getByID(1L).getModifyTime()));
+    public void checkModifyDate(){
+        part.renameAutoPart(1, "new name");
+        assertNotNull((part.getByID(1).getModifyTime()));
     }
 
 

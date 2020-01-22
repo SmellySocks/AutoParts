@@ -32,8 +32,11 @@ public class autoPartTime extends autoPart {
         this.modifyTime = modifyTime;
     }
 
-    public autoPartTime(Long id, String name, int price){
-        super(id, name, price);
+    public autoPartTime(String name, int price){
+        super(name, price);
+    }
+    public autoPartTime(){
+
     }
 
 }
