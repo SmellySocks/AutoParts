@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="DataSourceManagerImpl" format="xml" multifile-model="true">
-    <data-source source="LOCAL" name="default@localhost" uuid="c556dbf2-836d-447a-a607-158827c21e8c">
+    <data-source source="LOCAL" name="testdb" uuid="f5038a9f-441f-4b1d-ba4e-a58af549b746">
       <driver-ref>hsqldb.remote</driver-ref>
       <synchronize>true</synchronize>
       <jdbc-driver>org.hsqldb.jdbcDriver</jdbc-driver>
-      <jdbc-url>jdbc:hsqldb:hsql://localhost:9001/default</jdbc-url>
+      <jdbc-url>jdbc:hsqldb:hsql://localhost/testdb</jdbc-url>
     </data-source>
   </component>
 </project>
