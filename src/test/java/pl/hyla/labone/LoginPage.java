@@ -54,7 +54,7 @@ public class LoginPage {
         return webDriver.findElement(By.xpath("//*[@id=\"center_column\"]/div[1]/ol/li")) == null;
     }
 
-    public String isLoginSuccessfull(){
+    public String isLoginSuccessful(){
         return webDriver.getCurrentUrl();
     }
 

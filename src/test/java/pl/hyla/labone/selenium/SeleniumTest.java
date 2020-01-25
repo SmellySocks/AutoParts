@@ -1,6 +1,5 @@
 package pl.hyla.labone.selenium;
 
-import org.jbehave.core.annotations.Then;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.BeforeClass;
@@ -39,14 +38,14 @@ public static void driverSetup() throws Exception {
     public void loginFailed(){
     loginPage.open();
     loginPage.loginFailed();
-   assertFalse(loginPage.isLoginFailed());
+    assertFalse(loginPage.isLoginFailed());
     }
 
     @Test
     public void loginSuccess(){
     loginPage.open();
     loginPage.loginSuccess();
-    assertEquals("http://automationpractice.com/index.php?controller=my-account", loginPage.isLoginSuccessfull());
+    assertEquals("http://automationpractice.com/index.php?controller=my-account", loginPage.isLoginSuccessful());
     }
     @Test
     public void register(){
