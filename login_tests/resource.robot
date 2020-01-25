@@ -7,14 +7,14 @@ Documentation     A resource file with reusable keywords and variables.
 Library           SeleniumLibrary
 
 *** Variables ***
-${SERVER}         localhost:7272
-${BROWSER}        Firefox
+${SERVER}         http://automationpractice.com
+${BROWSER}        Chrome
 ${DELAY}          0
-${VALID USER}     demo
-${VALID PASSWORD}    mode
-${LOGIN URL}      http://${SERVER}/
-${WELCOME URL}    http://${SERVER}/welcome.html
-${ERROR URL}      http://${SERVER}/error.html
+${VALID USER}     mhyla@pjwstk.edu.pl
+${VALID PASSWORD}    asdasd
+${LOGIN URL}      http://automationpractice.com/index.php?controller=authentication&back=my-account
+${WELCOME URL}    http://automationpractice.com/index.php?controller=my-account
+${ERROR URL}      http://automationpractice.com/index.php?controller=authentication
 
 *** Keywords ***
 Open Browser To Login Page
@@ -24,7 +24,7 @@ Open Browser To Login Page
     Login Page Should Be Open
 
 Login Page Should Be Open
-    Title Should Be    Login Page
+    Title Should Be    Login - My Store
 
 Go To Login Page
     Go To    ${LOGIN URL}
@@ -32,15 +32,18 @@ Go To Login Page
 
 Input Username
     [Arguments]    ${username}
-    Input Text    username_field    ${username}
-
+    Input Text    email    ${username}
+`
 Input Password
     [Arguments]    ${password}
-    Input Text    password_field    ${password}
+    Input Text    passwd    ${password}
 
 Submit Credentials
-    Click Button    login_button
+    Click Button    SubmitLogin
 
 Welcome Page Should Be Open
     Location Should Be    ${WELCOME URL}
-    Title Should Be    Welcome Page
+    Title Should Be    My account - My Store
+
+Error Page Should Be Open
+    Location Should Be      ${ERROR URL}

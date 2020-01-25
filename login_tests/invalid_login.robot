@@ -15,10 +15,9 @@ Resource          resource.robot
 
 *** Test Cases ***               USER NAME        PASSWORD
 Invalid Username                 invalid          ${VALID PASSWORD}
-Invalid Password                 ${VALID USER}    invalid
 Invalid Username And Password    invalid          whatever
 Empty Username                   ${EMPTY}         ${VALID PASSWORD}
-Empty Password                   ${VALID USER}    ${EMPTY}
+Empty Password                   $mhyla@jajco.com    ${EMPTY}
 Empty Username And Password      ${EMPTY}         ${EMPTY}
 
 *** Keywords ***
@@ -31,4 +30,4 @@ Login With Invalid Credentials Should Fail
 
 Login Should Have Failed
     Location Should Be    ${ERROR URL}
-    Title Should Be    Error Page
+    Title Should Be    Login - My Store

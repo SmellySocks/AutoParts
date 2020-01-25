@@ -10,7 +10,7 @@ Test Teardown     Close Browser
 Valid Login
     Given browser is opened to login page
     When user "demo" logs in with password "mode"
-    Then welcome page should be open
+    Then error page should be open
 
 *** Keywords ***
 Browser is opened to login page
