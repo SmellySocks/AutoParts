@@ -53,11 +53,11 @@
         <div>Poprawne imię:</div>
         <input type="text" id="firstName" class="" value="Michal">
         <div>Numer:</div>
-        <input type="number" id="PESEL" class="" value="960310052777">
+        <input type="number" id="PESEL" class="" value="96031005277">
         <div>Pesel:</div>
-        <div id="pesel" class="">95011503554</div>
+        <input type="number" id="InvalidPESEL" class="" value="9asdfasdf">
         <div>Nip:</div>
-        <div id="nip" class="">2228881100</div>
+        <input type="text" id="invalidFirstName" class="" value="2228881100">
         <div>Email:</div>
         <div id="email" class="">sadas@gmail.com</div>
         `);
@@ -76,7 +76,14 @@
     });
     it("should check PESEL validation", function () {
         $(".validate").click();
-        expect(validateFirstName($('#firstName'))).toBe(true);
-    })
-
+        expect(validatePESEL($('#PESEL'))).toBe(true);
+    });
+    it("should check invalid PESEL", function () {
+        $(".validate").click();
+        expect(validatePESEL($('#InvalidPESEL'))).toBe(false);
+    });
+        it("should check invalidname validation", function () {
+            $(".validate").click();
+            expect(validateFirstName($('#invalidFirstName'))).toBe(false);
+        });
 });
