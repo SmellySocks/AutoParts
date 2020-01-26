@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Przykładowy formularz</title>
+    <meta name="description" content="Przykladowy formularz na zajecia w ZSE dla klasy 1Pg">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="manifest" href="site.webmanifest">
+    <link rel="apple-touch-icon" href="icon.png">
+    <!-- Place favicon.ico in the root directory -->
+
+
+
+    <meta name="theme-color" content="#fafafa">
+    <style>
+        h1{
+            font-family: "Century Gothic";
+            color: aqua;
+            text-align: center;
+        }
+        header{
+            background: #888888;
+        }
+        body{
+            background: cornflowerblue;
+        }
+        fieldset{
+            border: #222222 solid ;
+            width: 40%;
+            float: left;
+        }
+        input[type=text][type=email]{
+            font-family: "Century Gothic";
+            width: 30ch;
+        }
+
+    </style>
+</head>
+<body>
+<!--[if IE]>
+<p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
+<![endif]-->
+<header>
+    <h1>Wniosek o dołączenie do partii politycznej Polska Partia Przyjaciół Piwa</h1>
+</header>
+<script type="text/javascript">
+    function validateFirstName(firstName) {
+        let elem = $( this );
+        var len = firstName.length;
+        const regex = /^[A-Z]+[a-z]*/;
+        function validateFirstName() {
+            return regex.test(String(firstName));
+        }
+
+        if (len == 0) {
+            console.log('Name should not be empty')
+        } else if (!validateFirstName()) {
+            elem.addClass('invalid');
+            console.log('Names usually start with a capital and contain only letters');
+        }
+        else{
+            elem.removeClass('invalid');
+            console.log('dupa');
+        }
+    }
+
+</script>
+<h2> Submit the form below </h2>
+<div class="password-strength"></div>
+<br/>
+<div class="validate-number"></div>
+<br/>
+Enter first name
+<input type="text" class="firstname" id="firstname">
+<br/>
+ Enter PESEL :
+<input type="text" class="numberTextField">
+<br/>
+<br/>
+<br/>
+<button class="validate" onclick=validateFirstName()>Validate</button>
+
+</body>
+<script type="module" lang="javascript">
+    import {toolbox} from 'js/toolbox.js';
+    console.log(toolbox().validate({selector:'#blaa'}));
+</script>
+</html>
